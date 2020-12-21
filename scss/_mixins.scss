@@ -1,0 +1,51 @@
+/* flex*/
+@mixin flexCenter($align: center) {
+  display: flex;
+  justify-content: center;
+  align-items: $align;
+}
+@mixin flexBetween($align: center) {
+  display: flex;
+  justify-content: space-between;
+  align-items: $align;
+}
+/*padding and margin, width and height*/
+@mixin widthHeight($w, $h: $w) {
+  width: $w;
+  height: $h;
+}
+@mixin paddingsLR($left, $right: $left) {
+  padding-left: $left;
+  padding-right: $right;
+}
+@mixin paddingsTB($top, $bottom: $top) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+@mixin marginTB($top, $bottom: $top) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+@mixin marginLR($left, $right: $left) {
+  margin-left: $left;
+  margin-right: $right;
+}
+/*font properties*/
+@mixin fontProps($size, $weight, $color: inherit) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+/*button*/
+@mixin button($width, $lineHeight, $bgColor: inherit) {
+  text-align: center;
+  display: block;
+  width: $width;
+  line-height: $lineHeight;
+  background-color: $bgColor;
+  cursor: pointer;
+}
+@mixin noBorder {
+  border: none;
+  outline: none;
+}
