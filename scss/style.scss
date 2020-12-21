@@ -24,7 +24,10 @@
 }
 html {
   font-size: 10px;
+}
+body {
   font-family: "Lato", sans-serif;
+  color: $darkGray;
 }
 .container {
   max-width: 1200px;
@@ -37,10 +40,24 @@ p {
   margin: 0;
   padding: 0;
 }
+p {
+  font-size: 1.6rem;
+}
 a,
 button {
   transition: 0.2s;
   text-decoration: none;
+}
+.section__title,
+.section__subtitle {
+  text-align: center;
+  color: $darkGray;
+}
+.section__title {
+  font-size: 4.8rem;
+  font-weight: 500;
+  font-family: "Butler";
+  margin-bottom: 30px;
 }
 //header
 .header {
@@ -109,7 +126,6 @@ button {
   font-family: "Butler";
 }
 .header__subtitle {
-  font-size: 1.6rem;
   margin-bottom: 50px;
 }
 .header__btn {
@@ -140,5 +156,85 @@ button {
       border: 7px solid transparent;
       border-left: 11px solid #fff;
     }
+  }
+}
+//services
+.services {
+  @include paddingsTB(115px, 100px);
+  background-image: linear-gradient(160deg, #fcfdf7 0%, #fcfdf7 48%, #fff 48%);
+}
+.services__subtitle {
+  margin-bottom: 80px;
+}
+.services__icon {
+  @include flexCenter;
+  svg {
+    width: 50px;
+    height: 42px;
+  }
+}
+.services__button {
+  @include noBorder;
+  @include marginLR(10px);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: 180px;
+  padding-bottom: 30px;
+}
+.services__button.active,
+.services__button:hover {
+  background-color: #fff;
+  box-shadow: 5px 5px 8px rgba($color: #3a3a3a, $alpha: 0.1),
+    -5px 5px 8px rgba($color: #3a3a3a, $alpha: 0.1);
+}
+.services__icon {
+  @include flexCenter;
+  height: 130px;
+  svg {
+    fill: $darkGray;
+  }
+}
+.services__btn_text {
+  font: 500 1.8rem "Butler";
+  text-transform: uppercase;
+}
+.services__items {
+  margin-top: 60px;
+}
+.services__img {
+  width: 100%;
+  max-width: 630px;
+  height: 380px;
+  box-shadow: 20px 20px 0 $primaryColor;
+  img {
+    @include widthHeight(100%);
+    object-fit: cover;
+  }
+}
+.services__item_right {
+  @include flexCenter;
+}
+.services__h3 {
+  font: 500 2.4rem "Butler";
+  margin-bottom: 30px;
+}
+.services__text {
+  line-height: 156%;
+  margin-bottom: 40px;
+}
+.services__link {
+  @include fontProps(1.8rem, 500, $primaryColor);
+  text-transform: uppercase;
+  position: relative;
+  &::after {
+    content: "\2192";
+    position: absolute;
+    color: $primaryColor;
+    font-size: 1.8rem;
+    top: 40%;
+    right: -30px;
+    transform: translateY(-50%);
+    pointer-events: none;
   }
 }
