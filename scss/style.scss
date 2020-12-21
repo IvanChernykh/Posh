@@ -238,3 +238,17 @@ button {
     pointer-events: none;
   }
 }
+//gallery
+.gallery {
+  overflow: hidden;
+}
+.gallery__slide {
+  @include widthHeight(100%, 620px);
+  position: relative;
+  background-color: #000;
+}
+.gallery__img {
+  @include widthHeight(100%);
+  object-fit: cover;
+  opacity: 0.75;
+}
