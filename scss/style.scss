@@ -157,11 +157,24 @@ button {
       border-left: 11px solid #fff;
     }
   }
+  &:hover {
+    background-color: darken($primaryColor, 3);
+  }
 }
 //services
 .services {
   @include paddingsTB(115px, 100px);
+  background-position: 0 120px;
   background-image: linear-gradient(160deg, #fcfdf7 0%, #fcfdf7 48%, #fff 48%);
+  position: relative;
+}
+.services__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 130px;
+  background-color: #fcfdf7;
 }
 .services__subtitle {
   margin-bottom: 80px;
@@ -227,6 +240,7 @@ button {
   @include fontProps(1.8rem, 500, $primaryColor);
   text-transform: uppercase;
   position: relative;
+  border-bottom: 1px solid transparent;
   &::after {
     content: "\2192";
     position: absolute;
@@ -236,6 +250,9 @@ button {
     right: -30px;
     transform: translateY(-50%);
     pointer-events: none;
+  }
+  &:hover {
+    border-color: $primaryColor;
   }
 }
 //gallery
@@ -251,4 +268,56 @@ button {
   @include widthHeight(100%);
   object-fit: cover;
   opacity: 0.75;
+}
+.gallery__slide_inner {
+  position: absolute;
+  background-color: #fff;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 85px;
+  max-width: 970px;
+  width: 80%;
+  bottom: 54px;
+  left: 40px;
+}
+.gallery__h3 {
+  font: 500 3.2rem "Butler";
+  text-align: center;
+}
+.gallery__icon {
+  fill: $primaryColor;
+  width: 25px;
+  height: 25px;
+  display: block;
+  margin: 20px auto 0;
+}
+.slide__right {
+  border-left: 1px solid $darkGray;
+  p {
+    line-height: 160%;
+  }
+}
+//channel
+.channel {
+  @include paddingsTB(125px, 120px);
+}
+.channel__btn {
+  @include button(170px, 48px, $primaryColor);
+  @include fontProps(1.4rem, 500, #fff);
+  text-transform: uppercase;
+  margin: 0 auto;
+  &:hover {
+    background-color: darken($primaryColor, 3);
+  }
+}
+.channel__video {
+  max-width: 650px;
+  margin: 58px auto 40px;
+}
+//blog
+.blog {
+  background-color: $lightGray;
 }
