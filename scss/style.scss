@@ -319,5 +319,176 @@ button {
 }
 //blog
 .blog {
+  @include paddingsTB(120px);
   background-color: $lightGray;
+}
+.blog__items {
+  position: relative;
+}
+.blog__post-accent {
+  position: absolute;
+  @include fontProps(1.4rem, 700, $gray);
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  top: 80px;
+  left: -65px;
+  user-select: none;
+  &::before {
+    content: "";
+    display: block;
+    @include widthHeight(50px, 1px);
+    background-color: $gray;
+    position: absolute;
+    left: -65px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.blog__title {
+  margin-bottom: 30px;
+}
+.blog__buttons {
+  margin-bottom: 70px;
+}
+.blog__btn {
+  @include noBorder;
+  @include marginLR(29px);
+  background-color: transparent;
+  font-size: 1.6rem;
+  color: $darkGray;
+  text-transform: lowercase;
+  cursor: pointer;
+  &:hover {
+    color: $primaryColor;
+  }
+}
+.blog__btn.active {
+  color: $primaryColor;
+}
+.blog__item {
+  padding-bottom: 30px;
+}
+.blog__img {
+  @include widthHeight(100%, 300px);
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+  img {
+    position: relative;
+    @include widthHeight(100%);
+    object-fit: cover;
+  }
+  &:hover .blog__img_bg {
+    transform: translate(15px, 15px);
+  }
+}
+.blog__img_bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  @include widthHeight(100%);
+  background-color: $primaryColor;
+  transition: 0.4s;
+}
+.blog__h3 {
+  font-size: 1.8rem;
+  line-height: 165%;
+  max-width: 500px;
+  margin-bottom: 10px;
+  a {
+    color: $gray;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.blog__date {
+  font: 300 1.6rem "Butler";
+  color: $lightGrayText;
+}
+.blog_see-more {
+  @include button(170px, 48px, transparent);
+  margin: 40px auto 0;
+  border: 1px solid $darkGray;
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  &:hover {
+    color: #fff;
+    background-color: $darkGray;
+  }
+}
+//contacts
+.contacts {
+  @include paddingsTB(120px);
+}
+.section__subtitle {
+  margin-bottom: 70px;
+}
+.contacts__item {
+  @include flexCenter;
+}
+.contacts__item_inner {
+  display: flex;
+  align-items: center;
+}
+.contacts__icon {
+  @include widthHeight(60px);
+  margin-right: 30px;
+}
+.contacts__item-title {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+}
+.contacts__requisite {
+  font: 300 2.4rem "Butler";
+}
+//footer
+.footer {
+  @include paddingsTB(70px);
+  background-color: $darkGray;
+  color: #fff;
+}
+.footer__menu {
+  margin-bottom: 70px;
+  a {
+    @include marginLR(14px);
+    color: #fff;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+}
+.footer__logo img {
+  margin: 0 auto 25px;
+  display: block;
+}
+.footer__links {
+  position: relative;
+}
+.footer__link {
+  @include marginLR(12px);
+  font-size: 1.6rem;
+  color: #fff;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.footer__btn {
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.4rem;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  &::after {
+    content: "\2191";
+    position: absolute;
+    color: #fff;
+    right: -12px;
+    top: -5px;
+    font-size: 2rem;
+  }
 }
