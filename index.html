@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
     <link rel="stylesheet" href="css/normalize.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -60,12 +61,12 @@
             <img src="img\logo.svg" alt="logo" />
           </a>
           <nav class="nav">
-            <a href="" class="nav__link">home</a>
-            <a href="" class="nav__link">service</a>
-            <a href="" class="nav__link">gallery</a>
-            <a href="" class="nav__link">channel</a>
-            <a href="" class="nav__link">blog</a>
-            <a href="" class="nav__link">contact</a>
+            <a href="#" class="nav__link home__link">home</a>
+            <a href="#" class="nav__link service__link">service</a>
+            <a href="#" class="nav__link gallery__link">gallery</a>
+            <a href="#" class="nav__link channel__link">channel</a>
+            <a href="#" class="nav__link blog__link">blog</a>
+            <a href="#" class="nav__link contact__link">contact</a>
           </nav>
         </div>
         <div class="header__main">
@@ -74,8 +75,8 @@
             Have you ever wondered if what you know about herbal breast enlargement is accurate?
           </p>
           <div class="header__buttons d-flex justify-content-center">
-            <a href="" class="header__btn">About Us</a>
-            <a href="" class="header__btn header__btn_video"><span>Watch Video</span></a>
+            <a href="#" class="header__btn header__btn_about">About Us</a>
+            <a href="#" class="header__btn header__btn_video"><span>Watch Video</span></a>
           </div>
         </div>
       </div>
@@ -84,7 +85,7 @@
     <section class="services">
       <div class="services__bg"></div>
       <div class="container">
-        <h2 class="section__title">Our Services</h2>
+        <h2 class="section__title services__title">Our Services</h2>
         <p class="section__subtitle services__subtitle">
           Vastly improved treatments and increased social acceptance has lead to cosmetic
         </p>
@@ -133,18 +134,121 @@
         </div>
         <!-- services items -->
         <div class="services__items">
-          <div class="services__item services__item_2">
+          <!-- services item -->
+          <div class="services__item active">
             <div class="row">
               <div class="services__item_left col-lg-7">
                 <div class="services__img">
-                  <img src="img\services\2.webp" alt="wedding img" />
+                  <img
+                    src="img/blog/priscilla-du-preez-dlxLGIy-2VU-unsplash.webp"
+                    alt="about img"
+                  />
+                </div>
+              </div>
+              <div class="services__item_right col-lg-5">
+                <div class="services__item_inner">
+                  <h3 class="services__h3">
+                    Some text about our services <br />
+                    Take A rest
+                  </h3>
+                  <p class="services__text">
+                    Hydroderm is the highly desired anti-aging cream on the block. This serum
+                    restricts the occurrence of early aging sings on the skin and keeps the skin
+                    younger, tighter and healthier.
+                  </p>
+                  <a href="" class="services__link">Learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- services item -->
+          <div class="services__item">
+            <div class="row">
+              <div class="services__item_left col-lg-7">
+                <div class="services__img">
+                  <img src="img/services/2.webp" alt="wedding img" />
                 </div>
               </div>
               <div class="services__item_right col-lg-5">
                 <div class="services__item_inner">
                   <h3 class="services__h3">
                     To Keep Makeup Looking Fresh <br />
+                    Hello world
+                  </h3>
+                  <p class="services__text">
+                    Hydroderm is the highly desired anti-aging cream on the block. This serum
+                    restricts the occurrence of early aging sings on the skin and keeps the skin
+                    younger, tighter and healthier.
+                  </p>
+                  <a href="" class="services__link">Learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- services item -->
+          <div class="services__item">
+            <div class="row">
+              <div class="services__item_left col-lg-7">
+                <div class="services__img">
+                  <img src="img/blog/flaunter-WcX.webp" alt="party img" />
+                </div>
+              </div>
+              <div class="services__item_right col-lg-5">
+                <div class="services__item_inner">
+                  <h3 class="services__h3">
+                    Something about parties <br />
                     Take A Powder
+                  </h3>
+                  <p class="services__text">
+                    Hydroderm is the highly desired anti-aging cream on the block. This serum
+                    restricts the occurrence of early aging sings on the skin and keeps the skin
+                    younger, tighter and healthier.
+                  </p>
+                  <a href="" class="services__link">Learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- services item -->
+          <div class="services__item">
+            <div class="row">
+              <div class="services__item_left col-lg-7">
+                <div class="services__img">
+                  <img
+                    src="img\blog\tamara-bellis-68csPWTnafo-unsplash.webp"
+                    alt="beauty box img"
+                  />
+                </div>
+              </div>
+              <div class="services__item_right col-lg-5">
+                <div class="services__item_inner">
+                  <h3 class="services__h3">
+                    Just one more title <br />
+                    Beauty box
+                  </h3>
+                  <p class="services__text">
+                    Hydroderm is the highly desired anti-aging cream on the block. This serum
+                    restricts the occurrence of early aging sings on the skin and keeps the skin
+                    younger, tighter and healthier.
+                  </p>
+                  <a href="" class="services__link">Learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- services item -->
+          <div class="services__item">
+            <div class="row">
+              <div class="services__item_left col-lg-7">
+                <div class="services__img">
+                  <img src="img/blog/na-visky-3hRRT4qztzs-unsplash.webp" alt="course img" />
+                </div>
+              </div>
+              <div class="services__item_right col-lg-5">
+                <div class="services__item_inner">
+                  <h3 class="services__h3">
+                    This is the last one <br />
+                    Course
                   </h3>
                   <p class="services__text">
                     Hydroderm is the highly desired anti-aging cream on the block. This serum
@@ -161,31 +265,83 @@
     </section>
     <!-- gallery -->
     <div class="gallery">
-      <div class="gallery__slider">
-        <div class="gallery__slide">
-          <img src="img\gallery\1.webp" alt="" class="gallery__img" />
-          <div class="gallery__slide_inner row">
-            <div class="slide__left col-2">
-              <h3 class="gallery__h3">Sep 24</h3>
-              <svg class="gallery__icon">
-                <use xlink:href="img/main-sprite.svg#heart"></use>
-              </svg>
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="gallery__slide">
+              <img src="img\gallery\1.webp" alt="" class="gallery__img" />
+              <div class="gallery__slide_inner row">
+                <div class="slide__left col-2">
+                  <h3 class="gallery__h3">Sep 14</h3>
+                  <svg class="gallery__icon">
+                    <use xlink:href="img/main-sprite.svg#heart"></use>
+                  </svg>
+                </div>
+                <div class="slide__right col-10">
+                  <p class="gallery__text">
+                    Have you ever wondered if what you know about herbal breast enlargement is
+                    accurate? Consider the following paragraphs and compare what you know to the
+                    latest info on herbal breast enlargement. Women are often not happy with their
+                    breast size...
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="slide__right col-10">
-              <p class="gallery__text">
-                Have you ever wondered if what you know about herbal breast enlargement is accurate?
-                Consider the following paragraphs and compare what you know to the latest info on
-                herbal breast enlargement. Women are often not happy with their breast size...
-              </p>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__slide">
+              <img src="img\gallery\2.webp" alt="" class="gallery__img" />
+              <div class="gallery__slide_inner row">
+                <div class="slide__left col-2">
+                  <h3 class="gallery__h3">Oct 20</h3>
+                  <svg class="gallery__icon">
+                    <use xlink:href="img/main-sprite.svg#heart"></use>
+                  </svg>
+                </div>
+                <div class="slide__right col-10">
+                  <p class="gallery__text">
+                    Have you ever wondered if what you know about herbal breast enlargement is
+                    accurate? Consider the following paragraphs and compare what you know to the
+                    latest info on herbal breast enlargement. Women are often not happy with their
+                    breast size...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__slide">
+              <img src="img\gallery\3.webp" alt="" class="gallery__img" />
+              <div class="gallery__slide_inner row">
+                <div class="slide__left col-2">
+                  <h3 class="gallery__h3">Nov 13</h3>
+                  <svg class="gallery__icon">
+                    <use xlink:href="img/main-sprite.svg#heart"></use>
+                  </svg>
+                </div>
+                <div class="slide__right col-10">
+                  <p class="gallery__text">
+                    Have you ever wondered if what you know about herbal breast enlargement is
+                    accurate? Consider the following paragraphs and compare what you know to the
+                    latest info on herbal breast enlargement. Women are often not happy with their
+                    breast size...
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <div class="swiper-button-prev swiper__btn"></div>
+        <div class="swiper-button-next swiper__btn"></div>
+        <div class="gallery__slider"></div>
       </div>
     </div>
     <!-- channel -->
     <section class="channel">
       <div class="container">
-        <h2 class="section__title">Channel</h2>
+        <h2 class="section__title channel__title">Channel</h2>
         <p class="section__subtitle channel__subtitle">
           Vastly improved treatments and increased social
         </p>
@@ -323,13 +479,12 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__menu d-flex justify-content-center">
-          <a href="">home</a>
-          <a href="">service</a>
-          <a href="">gallery</a>
-          <a href="">channel</a>
-          <a href="">blog</a>
-          <a href="">team</a>
-          <a href="">contact</a>
+          <a href="#" class="home__link">home</a>
+          <a href="#" class="service__link">service</a>
+          <a href="#" class="gallery__link">gallery</a>
+          <a href="#" class="channel__link">channel</a>
+          <a href="#" class="blog__link">blog</a>
+          <a href="#" class="contact__link">contact</a>
         </div>
         <div class="footer__logo">
           <img src="img/logo.svg" alt="" />
@@ -342,5 +497,8 @@
         </div>
       </div>
     </footer>
+    <!-- javascript -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

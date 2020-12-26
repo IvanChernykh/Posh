@@ -215,6 +215,12 @@ button {
 .services__items {
   margin-top: 60px;
 }
+.services__item {
+  display: none;
+}
+.services__item.active {
+  display: block;
+}
 .services__img {
   width: 100%;
   max-width: 630px;
@@ -299,6 +305,9 @@ button {
   p {
     line-height: 160%;
   }
+}
+.swiper__btn {
+  color: #fff;
 }
 //channel
 .channel {
