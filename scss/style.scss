@@ -333,6 +333,10 @@ button {
 }
 .blog__items {
   position: relative;
+  display: none;
+}
+.blog__items.active {
+  display: flex;
 }
 .blog__post-accent {
   position: absolute;

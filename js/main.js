@@ -54,9 +54,9 @@ function scrollButtons() {
     scrollToLink(contact, '.contacts');
 }
 scrollButtons();
-function services() {
-    let buttons = document.querySelectorAll('.services__button');
-    let items = document.querySelectorAll('.services__item');
+function pickCategory(button, elems) {
+    let buttons = document.querySelectorAll(button);
+    let items = document.querySelectorAll(elems);
     function removeClass(elems, clas) {
         elems.forEach(function (elem) {
             elem.classList.remove(clas);
@@ -71,4 +71,5 @@ function services() {
         })
     }
 }
-services();
+pickCategory('.services__button', '.services__item');
+pickCategory('.blog__btn', '.blog__items');
