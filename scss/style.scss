@@ -137,7 +137,7 @@ button {
   position: fixed;
   display: flex;
   flex-direction: column;
-  background-color: $darkGray;
+  background-color: #202020;
   width: 0;
   height: 100vh;
   left: 0;
@@ -553,12 +553,14 @@ button {
   color: #fff;
 }
 .footer__menu {
-  margin-bottom: 70px;
+  margin-bottom: 55px;
+  flex-wrap: wrap;
   a {
     @include marginLR(14px);
     color: #fff;
     font-size: 1.4rem;
     text-transform: uppercase;
+    margin-bottom: 15px;
   }
 }
 .footer__logo img {

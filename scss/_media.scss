@@ -1,6 +1,18 @@
 @import "variables", "mixins";
 //1200
 @media (max-width: 1200px) {
+  //contacts
+  .contacts__icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  .contacts__item-title {
+    margin-bottom: 10px;
+  }
+  .contacts__requisite {
+    font-size: 2rem;
+  }
 }
 //992
 @media (max-width: 992px) {
@@ -15,7 +27,8 @@
   }
   .services,
   .channel,
-  .blog {
+  .blog,
+  .contacts {
     padding-top: 80px;
     padding-bottom: 80px;
   }
@@ -60,6 +73,12 @@
     max-width: 970px;
     bottom: 30px;
   }
+  //contacts
+  .contacts__icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+  }
 }
 //768
 @media (max-width: 768px) {
@@ -74,7 +93,9 @@
   }
   .services,
   .channel,
-  .blog {
+  .blog,
+  .contacts,
+  .footer {
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -162,6 +183,23 @@
   .blog__btn {
     @include marginLR(20px);
   }
+  //contacts
+  .contacts__item-title {
+    margin-bottom: 6px;
+  }
+  .contacts__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .contacts__item {
+    justify-content: start;
+  }
+  //footer
+  .footer__menu {
+    margin-bottom: 35px;
+    a {
+      @include marginLR(10px);
+    }
+  }
 }
 //576
 @media (max-width: 576px) {
@@ -173,7 +211,8 @@
   }
   .services,
   .channel,
-  .blog {
+  .blog,
+  .contacts {
     padding-top: 30px;
     padding-bottom: 40px;
   }
@@ -191,6 +230,9 @@
     font-size: 4.4rem;
     margin-bottom: 5px;
   }
+  .header__subtitle {
+    margin-bottom: 30px;
+  }
   .header__btn {
     margin: auto;
     &:first-child {
@@ -206,10 +248,18 @@
     box-shadow: 15px 15px 0 #e8be7b;
   }
   .services__button {
-    margin: 0 5px 15px;
+    margin: 0 5px 14px;
+    padding-bottom: 10px;
   }
   .services__items {
     margin-top: 15px;
+  }
+  .services__icon {
+    height: 55px;
+    svg {
+      width: 26px;
+      height: 25px;
+    }
   }
   .services__text {
     margin-bottom: 15px;
@@ -253,13 +303,40 @@
   .blog__img {
     height: 240px;
   }
+  //footer
+  .footer {
+    @include paddingsTB(30px);
+  }
+  .footer__menu {
+    margin-bottom: 15px;
+    a {
+      @include marginLR(8px);
+    }
+  }
+  .footer__links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__link:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+  .footer__btn {
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 //480
 @media (max-width: 480px) {
   //header
   .header__contacts {
-    display: none !important;
+    flex-direction: column;
+    svg {
+      width: 14px;
+    }
+  }
+  .header__phone {
+    margin-bottom: 5px;
   }
   .header__link:first-child {
     margin-left: 5px;
