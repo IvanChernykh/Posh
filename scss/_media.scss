@@ -6,6 +6,12 @@
 @media (max-width: 992px) {
   html {
     font-size: 9px;
+  } //header
+  .header__navigation {
+    margin-bottom: 200px;
+  }
+  .header {
+    padding-bottom: 200px;
   }
 }
 //768
@@ -20,10 +26,51 @@
   .menu__btn {
     display: flex;
   }
+  .header__title {
+    font-size: 5.4rem;
+  }
   .nav {
     display: none;
+  }
+  .header__navigation {
+    margin-bottom: 170px;
+  }
+  .header {
+    padding-bottom: 170px;
   }
 }
 //576
 @media (max-width: 576px) {
+  //header
+  .header {
+    padding-bottom: 80px;
+  }
+  .header__navigation {
+    margin-bottom: 120px;
+  }
+  .header__buttons {
+    flex-direction: column;
+  }
+  .header__title {
+    font-size: 4.4rem;
+    margin-bottom: 5px;
+  }
+  .header__btn {
+    margin: auto;
+    &:first-child {
+      margin-bottom: 20px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .header__contacts {
+    display: none !important;
+  }
+  .header__link:first-child {
+    margin-left: 5px;
+  }
+  .header__top {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
