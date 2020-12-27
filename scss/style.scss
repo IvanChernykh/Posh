@@ -54,6 +54,9 @@ button {
   text-align: center;
   color: $darkGray;
 }
+.section__subtitle {
+  margin-bottom: 70px;
+}
 .section__title {
   font-size: 4.8rem;
   font-weight: 500;
@@ -376,9 +379,8 @@ button {
   margin-right: auto;
   padding: 30px 85px;
   max-width: 970px;
-  width: 80%;
+  width: 90%;
   bottom: 54px;
-  left: 40px;
 }
 .gallery__h3 {
   font: 500 3.2rem "Butler";
@@ -524,9 +526,6 @@ button {
 //contacts
 .contacts {
   @include paddingsTB(120px);
-}
-.section__subtitle {
-  margin-bottom: 70px;
 }
 .contacts__item {
   @include flexCenter;
