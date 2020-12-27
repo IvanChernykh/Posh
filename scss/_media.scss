@@ -13,6 +13,12 @@
   .section__subtitle {
     margin-bottom: 60px;
   }
+  .services,
+  .channel,
+  .blog {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
   //header
   .header__navigation {
     margin-bottom: 200px;
@@ -22,8 +28,6 @@
   }
   //services
   .services {
-    padding-top: 80px;
-    padding-bottom: 80px;
     background-position: 0 0;
   }
   .services__bg {
@@ -68,6 +72,12 @@
   .section__subtitle {
     margin-bottom: 50px;
   }
+  .services,
+  .channel,
+  .blog {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   //header
   .header__link {
     margin-left: 20px;
@@ -88,10 +98,6 @@
     padding-bottom: 170px;
   }
   //services
-  .services {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
   .services__subtitle {
     margin-bottom: 40px;
   }
@@ -139,6 +145,23 @@
   .gallery__icon {
     margin: 10px auto 0;
   }
+  //channel
+  .channel__video {
+    margin: 0px auto 30px;
+  }
+  //blog
+  .blog__buttons {
+    margin-bottom: 40px;
+  }
+  .blog__img {
+    height: 280px;
+  }
+  .blog_see-more {
+    margin: 20px auto 0;
+  }
+  .blog__btn {
+    @include marginLR(20px);
+  }
 }
 //576
 @media (max-width: 576px) {
@@ -147,6 +170,12 @@
   }
   .section__subtitle {
     margin-bottom: 40px;
+  }
+  .services,
+  .channel,
+  .blog {
+    padding-top: 30px;
+    padding-bottom: 40px;
   }
   //header
   .header {
@@ -169,10 +198,6 @@
     }
   }
   //services
-  .services {
-    padding-top: 30px;
-    padding-bottom: 40px;
-  }
   .services__subtitle {
     margin-bottom: 30px;
   }
@@ -211,6 +236,23 @@
   :root {
     --swiper-navigation-size: 35px !important;
   }
+  //channel
+  .channel__video {
+    max-width: 400px;
+    iframe {
+      height: 230px !important;
+    }
+  }
+  //blog
+  .blog__buttons {
+    margin-bottom: 30px;
+  }
+  .blog__btn {
+    @include marginLR(10px);
+  }
+  .blog__img {
+    height: 240px;
+  }
 }
 
 //480
@@ -237,14 +279,19 @@
   }
   .gallery__slide_inner {
     bottom: 10px;
+    padding: 6px 0;
   }
   :root {
     --swiper-navigation-size: 26px !important;
   }
-}
-//360
-@media (max-width: 360px) {
-  .gallery__slide_inner {
-    display: none;
+  .gallery__text {
+    line-height: 129%;
+  }
+  //blog
+  .blog__btn {
+    @include marginLR(6px);
+  }
+  .blog__img {
+    height: 200px;
   }
 }

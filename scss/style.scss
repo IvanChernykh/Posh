@@ -395,9 +395,9 @@ button {
 }
 .slide__right {
   border-left: 1px solid $darkGray;
-  p {
-    line-height: 160%;
-  }
+}
+.gallery__text {
+  line-height: 160%;
 }
 .swiper__btn {
   color: #fff;
