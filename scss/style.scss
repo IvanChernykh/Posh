@@ -49,6 +49,9 @@ button {
   text-decoration: none;
   cursor: pointer;
 }
+a:visited {
+  color: inherit;
+}
 .section__title,
 .section__subtitle {
   text-align: center;
