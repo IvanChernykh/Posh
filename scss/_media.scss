@@ -1,0 +1,29 @@
+@import "variables", "mixins";
+//1200
+@media (max-width: 1200px) {
+}
+//992
+@media (max-width: 992px) {
+  html {
+    font-size: 9px;
+  }
+}
+//768
+@media (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+  //header
+  .header__link {
+    margin-left: 20px;
+  }
+  .menu__btn {
+    display: flex;
+  }
+  .nav {
+    display: none;
+  }
+}
+//576
+@media (max-width: 576px) {
+}

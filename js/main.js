@@ -27,6 +27,23 @@ function scroll(page, duration) {
     };
     requestAnimationFrame(anim);
 };
+function ShowMenu() {
+    let menuBtn = document.querySelector('.menu__btn');
+    let menu = document.querySelector('.nav__menu');
+    let links = document.querySelectorAll('.menu__link, .menu_close-btn');
+    let body = document.querySelector('body');
+    menuBtn.addEventListener('click', function () {
+        menu.classList.add('active');
+        body.style.overflow = 'hidden';
+    })
+    for (let link of links) {
+        link.addEventListener('click', function () {
+            menu.classList.remove('active');
+            body.style.overflow = 'auto';
+        })
+    }
+}
+ShowMenu();
 function scrollButtons() {
     let home = document.querySelectorAll('.home__link, .footer__btn');
     let service = document.querySelectorAll('.service__link');
@@ -58,9 +75,7 @@ function pickCategory(button, elems) {
     let buttons = document.querySelectorAll(button);
     let items = document.querySelectorAll(elems);
     function removeClass(elems, clas) {
-        elems.forEach(function (elem) {
-            elem.classList.remove(clas);
-        })
+        elems.forEach(function (elem) { elem.classList.remove(clas); })
     }
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function () {

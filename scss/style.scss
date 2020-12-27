@@ -47,6 +47,7 @@ a,
 button {
   transition: 0.2s;
   text-decoration: none;
+  cursor: pointer;
 }
 .section__title,
 .section__subtitle {
@@ -115,6 +116,97 @@ button {
 }
 .header__navigation {
   margin-bottom: 260px;
+}
+.menu__btn {
+  @include noBorder;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: none;
+  padding: 0;
+  display: none;
+}
+.menu__btn.active {
+  display: flex;
+}
+.nav__menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: $darkGray;
+  width: 0;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  padding: 60px 0;
+  z-index: 100;
+  transition: 0.2s;
+  overflow: hidden;
+  .nav__link {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0 20% 25px;
+    &::after {
+      display: none;
+    }
+  }
+}
+.menu_close-btn {
+  @include flexCenter;
+  @include noBorder;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 60px;
+  right: 20%;
+  background: none;
+  padding: 0;
+  div {
+    background: #fff;
+    width: 100%;
+    height: 3px;
+    transform: rotate(45deg);
+    transform-origin: center;
+    &::after {
+      content: "";
+      display: block;
+      width: 3px;
+      height: 30px;
+      background: #fff;
+      position: absolute;
+      left: 50%;
+      top: -13px;
+      transform: translateX(-50%);
+    }
+  }
+}
+.nav__menu.active {
+  width: 100%;
+}
+.menu__btn_inner {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    top: -9px;
+    background-color: #fff;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    bottom: -9px;
+    background-color: #fff;
+  }
 }
 .header__title,
 .header__subtitle {
@@ -189,7 +281,6 @@ button {
 .services__button {
   @include noBorder;
   @include marginLR(10px);
-  cursor: pointer;
   background-color: transparent;
   border: none;
   width: 180px;
@@ -370,7 +461,6 @@ button {
   font-size: 1.6rem;
   color: $darkGray;
   text-transform: lowercase;
-  cursor: pointer;
   &:hover {
     color: $primaryColor;
   }
@@ -495,7 +585,6 @@ button {
   font-size: 1.4rem;
   background-color: transparent;
   color: #fff;
-  cursor: pointer;
   &::after {
     content: "\2191";
     position: absolute;
@@ -505,3 +594,5 @@ button {
     font-size: 2rem;
   }
 }
+//media
+@import "media";
